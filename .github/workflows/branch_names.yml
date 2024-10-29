@@ -17,16 +17,17 @@ permissions:
   statuses: none
 
 on:
-<<<<<<< HEAD
-=======
   push:
-    branches-ignore:
-      - gh-pages
-      - metakitty
->>>>>>> 9c8b23e (wip)
+    paths:
+      - '**/*'
+  pull_request:
+    types: [opened, reopened]
+    paths:
+      - '**/*'
   pull_request_target:
-    branches:
-      - 'master'
+    types: [opened, reopened]
+    paths:
+      - '**/*'
 
 jobs:
   handle-branch-names:
